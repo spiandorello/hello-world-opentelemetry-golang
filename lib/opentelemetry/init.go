@@ -35,7 +35,7 @@ func Init(ctx context.Context, serviceName, serviceVersion string) (shutdown fun
 		err = errors.Join(inErr, shutdown(ctx))
 	}
 
-	// Set up propagator.
+	//// Set up propagator.
 	prop := newPropagator()
 	otel.SetTextMapPropagator(prop)
 
